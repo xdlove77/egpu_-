@@ -8,7 +8,7 @@
 
 2.1、已管理员身份执行gpu_switch 的 integrated.bat文件。
 	
-3、重启，如果是efi文件在usb中就插入之前格式化的usb（如果是新建分区就往下走），按住option选择efi boot 进入win，更新集显驱动，
+3、重启，如果是efi文件在u盘中就插入u盘（如果是新建分区就往下走），按住option选择efi boot 进入win，更新集显驱动，
 		更新成功后有可能会黑屏（如果黑屏就强制重启（没黑屏就重启），再用efi boot进入，之后进入设备管理器屏蔽独显对应PCIE桥）
 
 4、屏蔽成功之后重启，按住option选择efi boot启动 ，windows进度转动时插入egpu（注意只能插入笔记本左上角的typec接口，我的其他接口不管用），进入系统等待下载egpu驱动
@@ -18,7 +18,7 @@
 ！！！！！！！！！！！！ 必须看的 ！！！！！！！！！！！！！！
 
 必须注意：切回mac之前需要启动独显的PCIE桥，并且以管理员身份运行gpu-switch dedicated.bat。
-	之后重启windows（不需要使用efi boot）检查dgpu是否显示。
+	之后重启windows（可以直接切回macos使用 或 不使用efi boot进入windows检查dgpu是否显示）。
 	这些都设置好之后如果在切回win 就需要从2.1步骤重新配置（中间跳过步骤3的下载egpu驱动和步骤4下载集显驱动（因为这俩个都已下载过了）也会跳过步骤5）
 
 
